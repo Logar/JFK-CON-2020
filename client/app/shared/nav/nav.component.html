@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <ul class="menu">
+    <li class="nav-item">
+      <a
+        [routerLink]="['/videos']"
+        class="nav-link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <i class="fa fa-home"></i> Video Presentations
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLink]="['/speakers']"
+        class="nav-link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <i class="fa fa-laptop"></i> Speakers
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLink]="['/store']"
+        class="nav-link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <i class="fa fa-laptop"></i> Store
+      </a>
+    </li>
+  </ul>
+</nav>

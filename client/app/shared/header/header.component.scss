@@ -1,0 +1,18 @@
+@use "../../../boot" as *;
+#app-root.app-xs.app-lg {
+  #masthead {
+    width: 100%;
+  }
+} 
+#masthead {
+  display: block;
+  position: relative;
+  z-index: 4;
+  height: 100px;
+  margin-bottom: 30px;
+  // background-color: black;
+  .conference-logo {
+    width: 450px;
+    height: auto;
+  }
+}

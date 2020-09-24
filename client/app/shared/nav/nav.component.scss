@@ -1,0 +1,164 @@
+@use "../../../boot" as *;
+
+#app-root.app-xs.app-lg nav {
+  label {
+    display: none;
+  }
+  ul.menu {
+    max-height: 50px;
+    transition: none;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+nav {
+  position: relative;
+  &.navbar.navbar-dark {
+    background-color: #090f33;
+  }
+  ul {
+    overflow: hidden;
+  }
+  #hamburger-button {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    user-select: none;
+  }    
+  label span {
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #cdcdcd;
+    border-radius: 3px;
+    transition: background .2s ease-out;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+      margin-bottom: 5px;
+      background: #cdcdcd;
+      border-radius: 3px;
+    }
+    &:before {
+      top: 10px;
+    }
+    &:after {
+      top: -10px;
+    }
+  }
+  .menu {
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+}
+
+#hamburger-button:checked ~ .menu {
+  max-height: 240px;
+}
+
+#hamburger-button:checked ~ label span {
+  background: transparent;
+  &:before {
+    transform: rotate(-45deg);
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+}
+
+#hamburger-button:checked ~ label:not(.steps) span:before,
+#hamburger-button:checked ~ label:not(.steps) span:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+  label {
+    display: none;
+  }
+}
+
+/* why do id selectors work but nothing else? */
+#app-root.app-xs app-nav {
+
+  ul.menu {
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-top: 20px;
+    margin-left: 5px;
+    flex-direction: column;
+    > li.nav-item {
+      display: block;
+      margin-bottom: 35px;
+      list-style-type: none !important ;
+      a {
+        padding: 8px 16px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #CCCCCC;
+        .fa {
+          vertical-align: text-bottom;
+        }
+        .fa-home,
+        .fa-laptop,
+        .portfolio-icon {
+          font-size: 24px;
+        }
+        .fa-file {
+          vertical-align: top;
+          font-size: 20px;
+        }
+        svg.portfolio-icon {
+          vertical-align: baseline;
+          width: 22px;
+          height: 22px;
+          fill: white;
+        }
+        &:hover {
+          color: #06F;
+          text-shadow: 2px 2px 1px #000000;
+          & svg {
+            fill: #06F;
+          }    
+        }
+      }
+      a.current {
+        color: white;
+        background-color: #000000;
+        opacity:0.6;
+        filter:alpha(opacity=60);
+      }
+    }
+  }
+}
+
+#app-root.app-xs.app-lg app-nav {
+  ul.menu {
+    flex-direction: row;
+    > li.nav-item {
+      display: inline-flex;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    ul.menu {
+      flex-direction: row;
+      > li.nav-item .fa,
+      > li.nav-item .custom-icon {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@include media-breakpoint-down(xs) {
+  .app-xs {
+    .nav-item .custom-icon,
+    .nav-item .fa {
+      display: none;
+    }
+    #resume-component #spinner {
+      left: 5%;
+    }
+  }
+}

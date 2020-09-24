@@ -1,0 +1,72 @@
+#app-root.app-xs {
+  display: block;
+}
+#app-root.app-xs.app-md {
+  display: block;
+}
+#app-root.app-xs.app-lg {
+  display: block;
+}
+
+html body {
+  color: #fff;
+  background-color: #000;
+}
+
+#splash-wrapper {
+  font-size: 2.0rem;
+  color: white;
+  // position: relative;
+  // width: 100%;
+  // margin: 0px auto;
+  // overflow: hidden;  
+  #conference-preview-bg {
+    position: absolute;
+    z-index: -1;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: url('/assets/images/jfk-oval-office.png');
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0; /* remove any pre-existing padding, just in case */
+    padding-bottom: 75%; /* for a 4:3 aspect ratio */
+  }
+  .intro {
+    max-width: 700px;
+  }
+  .get-tickets {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #fff;
+  }
+  .conference-date {
+    display: flex;
+    font-size: 1.5rem;
+    .date-range {
+      font-weight: bold;
+    }
+    .month-year {
+     display: block; 
+    }
+    .cell:first-child {
+      border-right: 0px;
+    }
+    .cell {
+      text-align: center;
+      padding: 10px 40px;
+      border: 1px solid #fff;
+      background: rgb(8, 8, 45);
+      background: rgba(8, 8, 45, 0.6);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";  
+    }
+  }
+  .why-attend {
+    font-size: 20px;
+    width: 500px;
+  }
+}
