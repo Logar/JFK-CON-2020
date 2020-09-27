@@ -1,18 +1,11 @@
 @use "boot" as *;
 @use "sass:map";
 
-$theme-colors: (
-  "success": #28a745,
-  "info": #17a2b8,
-  "warning": #ffc107
-);
-
 @include media-breakpoint-down(xs) {  }
 @include media-breakpoint-down(sm) {  }
 @include media-breakpoint-down(md) {  }
 @include media-breakpoint-down(lg) {  }
 // No media query necessary for xl breakpoint as it has no upper bound on its width
-
 
 .html, body {
   width: 100%;
@@ -20,8 +13,23 @@ $theme-colors: (
   min-width: map.get($grid-breakpoints, "sm") - 180;
 }
 
+:root {
+  // Theme colors
+  --theme-primary-navyblue: #08082d; 
+  --theme-primary-lightblue: #bfdff7;
+  --theme-primary-gold: #d1a932;
+  --theme-primary-brown: #87361b;
+  // General colors
+  --white: #fff;
+  --black: #000;
+  // Backgrounds
+  --bg-success: #28a745;
+  --bg-info: #17a2b8;
+  --bg-warning: #ffc107;
+}
+
 h1, h2, h3 {
-  color: #bfdff7;
+  color: var(--theme-primary-lightblue);
 }
 
 h1 {
@@ -42,6 +50,12 @@ h3 {
 
 .input-group {
   margin-bottom: 15px;
+}
+
+.custom-icon {
+  width: 50px;
+  height: 50px;
+  fill: var(--black);
 }
 
 .form {
