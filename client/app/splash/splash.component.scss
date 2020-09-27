@@ -14,12 +14,6 @@ html body {
 }
 
 #splash-wrapper {
-  font-size: 2.0rem;
-  color: white;
-  // position: relative;
-  // width: 100%;
-  // margin: 0px auto;
-  // overflow: hidden;  
   #conference-preview-bg {
     position: absolute;
     z-index: -1;
@@ -35,13 +29,8 @@ html body {
     padding-bottom: 75%; /* for a 4:3 aspect ratio */
   }
   .intro {
+    font-size: 1.8em;
     max-width: 700px;
-  }
-  .get-tickets {
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    border: 1px solid #fff;
   }
   .conference-date {
     display: flex;
