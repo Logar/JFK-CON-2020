@@ -24,6 +24,8 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { CountDownComponent } from './shared/countdown/countdown.component';
+import { TicketButtonComponent } from './ticket-button/ticket-button.component';
+
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -41,7 +43,8 @@ export function tokenGetter() {
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
-    CountDownComponent
+    CountDownComponent,
+    TicketButtonComponent
   ],
   imports: [
     AppRoutingModule,
