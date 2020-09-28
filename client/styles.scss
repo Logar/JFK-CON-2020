@@ -44,6 +44,10 @@ h3 {
   font-size: 1rem;
 }
 
+.container section {
+  margin-top: 20px;
+}
+
 .top-container {
   min-width: 450px;
 }
@@ -104,6 +108,10 @@ a:hover {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.relative {
+  position: relative;
 }
 
 .success-box {
