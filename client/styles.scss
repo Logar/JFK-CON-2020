@@ -13,6 +13,14 @@
   min-width: map.get($grid-breakpoints, "sm") - 180;
 }
 
+#app-root {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  margin-bottom: 100px; /* height of your footer */
+}
+
 :root {
   // Theme colors
   --theme-primary-navyblue: #08082d; 
@@ -142,4 +150,24 @@ a:hover {
   -moz-box-shadow: 3px 3px 5px 4px #ccc;
   -webkit-box-shadow: 3px 3px 5px 4px #ccc;
   box-shadow: 0 0 6px 6px #ccc;
+}
+
+html body {
+  color: #fff;
+  background-color: #000;
+}
+
+#conference-preview-bg {
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: url('/assets/images/jfk-oval-office.png');
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 0; /* remove any pre-existing padding, just in case */
+  padding-bottom: 75%; /* for a 4:3 aspect ratio */
 }
