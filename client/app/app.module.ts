@@ -27,6 +27,7 @@ import { CountDownComponent } from './shared/countdown/countdown.component';
 import { TicketButtonComponent } from './ticket-button/ticket-button.component';
 import { FooterComponent } from './footer/footer.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { UnauthNavComponent } from './unauth-nav/unauth-nav.component';
 
 
 export function tokenGetter() {
@@ -49,6 +50,7 @@ export function tokenGetter() {
     TicketButtonComponent,
     FooterComponent,
     TicketsComponent,
+    UnauthNavComponent
   ],
   imports: [
     AppRoutingModule,
