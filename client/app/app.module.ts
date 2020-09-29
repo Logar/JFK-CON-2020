@@ -26,6 +26,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { CountDownComponent } from './shared/countdown/countdown.component';
 import { TicketButtonComponent } from './ticket-button/ticket-button.component';
 import { FooterComponent } from './footer/footer.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 
 export function tokenGetter() {
@@ -46,7 +47,8 @@ export function tokenGetter() {
     NotFoundComponent,
     CountDownComponent,
     TicketButtonComponent,
-    FooterComponent
+    FooterComponent,
+    TicketsComponent,
   ],
   imports: [
     AppRoutingModule,
