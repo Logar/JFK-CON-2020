@@ -1,8 +1,9 @@
 app-unauth-nav {
   nav {
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: right;
+    &:after {
+      clear: both;
+    }
   }
   a {
     font-size: 24px;
