@@ -3,6 +3,10 @@
   "compilerOptions": {
     "outDir": "../dist/server",
     "baseUrl": "",
-    "module": "commonjs"
+    "module": "commonjs",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./@types"
+    ]
   }
 }
