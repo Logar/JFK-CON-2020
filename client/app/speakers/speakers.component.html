@@ -1,1 +1,18 @@
-<p>speakers works!</p>
+<div id="conference-preview-bg"></div>
+<h1 class="page-title">Speakers</h1>
+<section class="speakers primary">
+  <div *ngFor="let speaker of primarySpeakers">
+    <div class="thumbnail primary">
+      <img src="/assets/images/speakers/{{speaker.thumbnail}}" alt="{{speaker.name}}">
+      <div>{{ speaker.name }}</div>
+    </div>
+  </div>
+</section>
+<section class="speakers secondary">
+  <div *ngFor="let speaker of secondarySpeakers">
+    <div class="thumbnail secondary">
+      <i class="fas fa-user-tie"></i>
+      <div>{{ speaker.name }}</div>
+    </div>
+  </div>
+</section>
