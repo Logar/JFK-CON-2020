@@ -12,6 +12,7 @@
   .intro {
     font-size: 1.8em;
     max-width: 700px;
+    margin-top: 25px;
   }
   .conference-date {
     display: flex;
@@ -27,7 +28,7 @@
     }
     .cell {
       text-align: center;
-      padding: 10px 40px;
+      padding: 10px 20px;
       border: 1px solid #fff;
       background: rgb(8, 8, 45);
       background: rgba(8, 8, 45, 0.6);
@@ -36,6 +37,7 @@
     }
   }
   .why-attend {
+    margin-top: 60px;
     font-size: 20px;
     width: 500px;
   }
