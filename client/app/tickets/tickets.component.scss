@@ -12,6 +12,13 @@ app-tickets {
         color: #fff;
         filter: brightness(150%);
       }
+      .fas {
+        font-size: 48px;
+        vertical-align: sub;
+      }
+    }
+    .tier-1 {
+      background-color: #126324;
     }
     .tier-2 {
       background-color: var(--theme-primary-navyblue);
