@@ -38,10 +38,18 @@
 
 h1, h2, h3 {
   color: var(--theme-primary-lightblue);
+  -webkit-text-stroke: 1px #282828;
+	text-shadow: 0px 4px 4px #282828;
+
 }
 
 h1 {
   font-size: 1.5rem;
+}
+
+h1.page-title {
+  font-size: 2rem;
+  text-align: left;
 }
 
 h2 {
