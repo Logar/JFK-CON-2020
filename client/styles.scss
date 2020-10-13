@@ -1,18 +1,11 @@
 @use "boot" as *;
 @use "sass:map";
 
-$theme-colors: (
-  "success": #28a745,
-  "info": #17a2b8,
-  "warning": #ffc107
-);
-
 @include media-breakpoint-down(xs) {  }
 @include media-breakpoint-down(sm) {  }
 @include media-breakpoint-down(md) {  }
 @include media-breakpoint-down(lg) {  }
 // No media query necessary for xl breakpoint as it has no upper bound on its width
-
 
 .html, body {
   width: 100%;
@@ -20,12 +13,43 @@ $theme-colors: (
   min-width: map.get($grid-breakpoints, "sm") - 180;
 }
 
+#app-root {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  margin-bottom: 100px; /* height of your footer */
+}
+
+:root {
+  // Theme colors
+  --theme-primary-navyblue: #08082d; 
+  --theme-primary-lightblue: #bfdff7;
+  --theme-primary-gold: #d1a932;
+  --theme-primary-brown: #87361b;
+  // General colors
+  --white: #fff;
+  --black: #000;
+  // Backgrounds
+  --bg-success: #28a745;
+  --bg-info: #17a2b8;
+  --bg-warning: #ffc107;
+}
+
 h1, h2, h3 {
-  color: #bfdff7;
+  color: var(--theme-primary-lightblue);
+  -webkit-text-stroke: 1px #282828;
+	text-shadow: 0px 4px 4px #282828;
+
 }
 
 h1 {
   font-size: 1.5rem;
+}
+
+h1.page-title {
+  font-size: 2rem;
+  text-align: left;
 }
 
 h2 {
@@ -36,12 +60,23 @@ h3 {
   font-size: 1rem;
 }
 
+.container section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .top-container {
   min-width: 450px;
 }
 
 .input-group {
   margin-bottom: 15px;
+}
+
+.custom-icon {
+  width: 50px;
+  height: 50px;
+  fill: var(--black);
 }
 
 .form {
@@ -92,6 +127,10 @@ a:hover {
   margin-right: auto;
 }
 
+.relative {
+  position: relative;
+}
+
 .success-box {
   padding: 10px;
   border-style: solid;
@@ -120,4 +159,24 @@ a:hover {
   -moz-box-shadow: 3px 3px 5px 4px #ccc;
   -webkit-box-shadow: 3px 3px 5px 4px #ccc;
   box-shadow: 0 0 6px 6px #ccc;
+}
+
+html body {
+  color: #fff;
+  background-color: #000;
+}
+
+#conference-preview-bg {
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: url('/assets/images/jfk-oval-office.png');
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 0; /* remove any pre-existing padding, just in case */
+  padding-bottom: 75%; /* for a 4:3 aspect ratio */
 }

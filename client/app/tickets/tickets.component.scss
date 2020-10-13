@@ -1,0 +1,30 @@
+app-tickets {
+  text-align: center;
+  margin: 0 auto;
+  .button-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    a {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #fff;
+      &:hover {
+        color: #fff;
+        filter: brightness(150%);
+      }
+      .fas {
+        font-size: 48px;
+        vertical-align: sub;
+      }
+    }
+    .tier-1 {
+      background-color: #126324;
+    }
+    .tier-2 {
+      background-color: var(--theme-primary-navyblue);
+    }
+    .tier-3 {
+      background-color: #310331;
+    }
+  }
+}

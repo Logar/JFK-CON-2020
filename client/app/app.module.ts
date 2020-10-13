@@ -24,6 +24,12 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { CountDownComponent } from './shared/countdown/countdown.component';
+import { TicketButtonComponent } from './ticket-button/ticket-button.component';
+import { FooterComponent } from './footer/footer.component';
+import { TicketsComponent } from './tickets/tickets.component';
+import { SpeakersComponent } from './speakers/speakers.component';
+import { UnauthNavComponent } from './unauth-nav/unauth-nav.component';
+
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -41,7 +47,12 @@ export function tokenGetter() {
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
-    CountDownComponent
+    CountDownComponent,
+    TicketButtonComponent,
+    FooterComponent,
+    TicketsComponent,
+    SpeakersComponent,
+    UnauthNavComponent
   ],
   imports: [
     AppRoutingModule,

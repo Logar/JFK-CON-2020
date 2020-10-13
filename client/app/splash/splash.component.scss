@@ -8,40 +8,11 @@
   display: block;
 }
 
-html body {
-  color: #fff;
-  background-color: #000;
-}
-
 #splash-wrapper {
-  font-size: 2.0rem;
-  color: white;
-  // position: relative;
-  // width: 100%;
-  // margin: 0px auto;
-  // overflow: hidden;  
-  #conference-preview-bg {
-    position: absolute;
-    z-index: -1;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background: url('/assets/images/jfk-oval-office.png');
-    background-position: top center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 0; /* remove any pre-existing padding, just in case */
-    padding-bottom: 75%; /* for a 4:3 aspect ratio */
-  }
   .intro {
+    font-size: 1.8em;
     max-width: 700px;
-  }
-  .get-tickets {
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    border: 1px solid #fff;
+    margin-top: 25px;
   }
   .conference-date {
     display: flex;
@@ -57,7 +28,7 @@ html body {
     }
     .cell {
       text-align: center;
-      padding: 10px 40px;
+      padding: 10px 20px;
       border: 1px solid #fff;
       background: rgb(8, 8, 45);
       background: rgba(8, 8, 45, 0.6);
@@ -66,6 +37,7 @@ html body {
     }
   }
   .why-attend {
+    margin-top: 60px;
     font-size: 20px;
     width: 500px;
   }

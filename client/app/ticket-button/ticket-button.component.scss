@@ -1,0 +1,21 @@
+ticket-button {
+  a {
+    margin-top: 20px;
+    opacity: 0.8;
+    background-color: var(--black) !important;
+    border: 1px solid var(--theme-primary-gold) !important;
+  }
+  .custom-icon {
+    fill: var(--theme-primary-gold);
+  }
+  div.text {
+    display: inline-block;
+    font-size: 24px;
+    position: relative;
+    vertical-align: top;
+    top: 10px;
+    margin-left: 20px;
+    color: var(--theme-primary-gold);
+    text-transform: uppercase;
+  }
+}

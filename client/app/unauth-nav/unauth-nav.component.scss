@@ -1,0 +1,17 @@
+app-unauth-nav {
+  nav {
+    float: right;
+    &:after {
+      clear: both;
+    }
+  }
+  a {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    padding-left: 20px;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
