@@ -1,17 +1,23 @@
-app-unauth-nav {
+app-unauth-nav.header-links {
   nav {
     float: right;
     &:after {
       clear: both;
     }
+    ul {
+      margin: 0;
+      li {
+        list-style-type: none;
+        display: inline-flex;
+      }
+    }
   }
   a {
     font-size: 24px;
-    color: #fff;
-    font-weight: bold;
+    color: var(--theme-primary-gold);
     padding-left: 20px;
     &:hover {
-      color: #fff;
+      color: var(--theme-primary-gold);
     }
   }
 }
