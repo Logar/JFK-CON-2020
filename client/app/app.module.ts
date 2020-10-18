@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppState } from './app.state';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+import { SEOService } from './services/seo.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 
@@ -29,7 +30,6 @@ import { FooterComponent } from './footer/footer.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { SpeakersComponent } from './speakers/speakers.component';
 import { UnauthNavComponent } from './unauth-nav/unauth-nav.component';
-
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -66,11 +66,12 @@ export function tokenGetter() {
     })
   ],
   providers: [
+    AppState,
     AuthService,
     AuthGuardLogin,
     AuthGuardAdmin,
     UserService,
-    AppState
+    SEOService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
