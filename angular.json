@@ -24,6 +24,9 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
+              "client/robots.txt",
+              "client/humans.txt",
+              "client/sitemap.xml",
               "client/assets/favicon.ico",
               "client/assets"
             ],
