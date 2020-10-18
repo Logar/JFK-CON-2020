@@ -52,16 +52,29 @@ app-footer {
 
   /* Footer links */
 
-  .footer-distributed .footer-links{
-    color:  #ffffff;
+  footer.footer-distributed app-unauth-nav.footer-links {
     margin: 20px 0 12px;
-  }
-
-  .footer-distributed .footer-links a{
-    display:inline-block;
-    line-height: 1.8;
-    text-decoration: none;
-    color:  inherit;
+    ul {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    li {
+      list-style-type: none;
+      display: inline-block;
+      padding-right: 5px;
+      &:first-child {
+        padding-left: 0;
+      }
+      a {
+        line-height: 1.8;
+        text-decoration: none;
+        color: var(--theme-primary-gold);
+      }
+      &:not(:last-child):after {
+        content: '  |  ';
+        white-space: pre;
+      }
+    }
   }
 
   .footer-distributed .footer-company-name{
