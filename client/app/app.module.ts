@@ -32,6 +32,9 @@ import { TicketsComponent } from './tickets/tickets.component';
 import { SpeakersComponent } from './speakers/speakers.component';
 import { UnauthNavComponent } from './unauth-nav/unauth-nav.component';
 
+// Pipes
+import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
+
 export function tokenGetter() {
   return localStorage.getItem('token');
 }
@@ -54,6 +57,7 @@ export function tokenGetter() {
     TicketsComponent,
     SpeakersComponent,
     UnauthNavComponent,
+    SafeHtmlPipe
   ],
   imports: [
     AppRoutingModule,
