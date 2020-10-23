@@ -1,13 +1,14 @@
 @use "../../../boot" as *;
 #app-root.app-xs.app-lg {
-  #masthead {
+  header {
     width: 100%;
   }
 } 
-#masthead {
+header {
   display: block;
   position: relative;
   z-index: 4;
+  margin-bottom: 20px;
   .conference-logo {
     width: 450px;
     height: auto;
