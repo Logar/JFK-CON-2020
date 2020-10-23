@@ -6,12 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 // Services
+import { AuthGuardLogin } from './services/auth-guard-login.service';
+import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 import { AppState } from './app.state';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { SEOService } from './services/seo.service';
-import { AuthGuardLogin } from './services/auth-guard-login.service';
-import { AuthGuardAdmin } from './services/auth-guard-admin.service';
+import { SpeakerService } from './services/speaker.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -52,7 +53,7 @@ export function tokenGetter() {
     FooterComponent,
     TicketsComponent,
     SpeakersComponent,
-    UnauthNavComponent
+    UnauthNavComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -71,7 +72,8 @@ export function tokenGetter() {
     AuthGuardLogin,
     AuthGuardAdmin,
     UserService,
-    SEOService
+    SEOService,
+    SpeakerService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
