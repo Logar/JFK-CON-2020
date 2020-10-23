@@ -40,6 +40,10 @@ const routes: Routes = [
       description: 'Listen to expert speakers from all over the world at JFK Lancer\'s 24th annual JFK assassination conference. Our primary speakers are for 2020 are Jim DiEugenio, Bill Simpich, Robert Groden.'
     }
   },
+  { 
+    path: 'speakers/:link',
+    component: SpeakersComponent
+  },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
