@@ -1,9 +1,13 @@
-<header id="masthead">
-  <a href="/">
+<header>
+  <a
+    [routerLink]="['/']"
+    class="nav-link"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact:true}">
     <img
       src="/assets/images/jfk-lancer-2020-conference.png"
       alt="JFK Lancer 2020 Conference"
       class="conference-logo">
   </a>
-  <app-unauth-nav></app-unauth-nav>
+  <app-unauth-nav class="header-links"></app-unauth-nav>
 </header>

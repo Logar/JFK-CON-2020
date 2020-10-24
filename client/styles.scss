@@ -18,7 +18,7 @@
   overflow: hidden;
   display: block;
   position: relative;
-  margin-bottom: 100px; /* height of your footer */
+  margin-bottom: 20px;
 }
 
 :root {
@@ -95,15 +95,12 @@ h3 {
   border-left: 5px solid #a94442; /* red */
 }
 
-a { 
-  color: #06F;
-  text-decoration: underline;
-}
-
-a:hover { 
-  color: #C60;
-  cursor: pointer;
-  text-decoration: underline;
+app-root a { 
+  color: var(--theme-primary-gold);
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 .transparency-container {
