@@ -1,0 +1,31 @@
+<nav>
+  <ul>
+    <li class="nav-item">
+      <a
+        [routerLink]="['/']"
+        class="nav-link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+          Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLink]="['/speakers']"
+        class="nav-link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+          Speakers
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLink]="['/tickets']"
+        class="nav-link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+          Tickets
+      </a>
+    </li>
+  </ul>
+</nav>
