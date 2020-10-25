@@ -46,10 +46,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.auth.login(this.loginForm.value).subscribe(
-      res => this.router.navigate(['/']),
-      error => this.toast.setMessage('invalid email or password!', 'danger')
-    );
+    // this.auth.login(this.loginForm.value).subscribe(
+    //   res => this.router.navigate(['/']),
+    //   error => this.toast.setMessage('invalid email or password!', 'danger')
+    // );
   }
 
 }

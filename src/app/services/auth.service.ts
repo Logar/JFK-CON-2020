@@ -6,8 +6,6 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { UserService } from './user.service';
 import { User } from '../shared/models/user.model';
 
-import 'rxjs/add/operator/map';
-
 @Injectable()
 export class AuthService {
   loggedIn = false;
@@ -26,14 +24,14 @@ export class AuthService {
   }
 
   login(emailAndPassword) {
-    return this.userService.login(emailAndPassword).map(
-      res => {
-        localStorage.setItem('token', res.token);
-        const decodedUser = this.decodeUserFromToken(res.token);
-        this.setCurrentUser(decodedUser);
-        return this.loggedIn;
-      }
-    );
+    // return this.userService.login(emailAndPassword).map(
+    //   res => {
+    //     localStorage.setItem('token', res.token);
+    //     const decodedUser = this.decodeUserFromToken(res.token);
+    //     this.setCurrentUser(decodedUser);
+    //     return this.loggedIn;
+    //   }
+    // );
   }
 
   logout() {

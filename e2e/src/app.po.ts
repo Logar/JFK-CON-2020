@@ -1,16 +1,11 @@
-import { $$, browser } from 'protractor';
+import { browser, by, element } from 'protractor';
 
-export class Angular2FullStackPage {
-  navigateTo() {
-    return browser.get(browser.baseUrl) as Promise<any>;
+export class AppPage {
+  navigateTo(): Promise<unknown> {
+    return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
-  getNavbarElement(n) {
-    return $$('app-root a').get(n).getText() as Promise<string>;
+  getTitleText(): Promise<string> {
+    return element(by.css('app-root .content span')).getText() as Promise<string>;
   }
-
-  getNavbarButton() {
-    return $$('app-root button').get(0).getText() as Promise<string>;
-  }
-
 }
