@@ -10,7 +10,7 @@
 .html, body {
   width: 100%;
   height: 100vh;
-  min-width: map.get($grid-breakpoints, "sm") - 180;
+  min-width: 100%;
 }
 
 #app-root {
@@ -66,7 +66,7 @@ h3 {
 }
 
 .top-container {
-  min-width: 450px;
+  min-width: 100%;
 }
 
 .input-group {

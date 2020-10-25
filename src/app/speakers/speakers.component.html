@@ -1,5 +1,5 @@
 <div id="conference-preview-bg"></div>
-<main *ngIf="allSpeakers">
+<main *ngIf="primarySpeakers">
   <h1 class="page-title">Speakers</h1>
   <article class="speakers primary">
     <div *ngFor="let speaker of primarySpeakers">
@@ -33,7 +33,7 @@
     </div>
   </article>
 </main>
-<main *ngIf="!allSpeakers" class="speaker">
+<main *ngIf="primarySpeakers" class="speaker">
   <article>
     <img
       src="{{ speakerModel.thumbnail }}"

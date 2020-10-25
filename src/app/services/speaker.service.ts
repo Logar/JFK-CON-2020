@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/do';
-
 import { Speaker } from '../shared/models/speaker.model';
 
 @Injectable({
@@ -13,22 +10,24 @@ import { Speaker } from '../shared/models/speaker.model';
 export class SpeakerService {
 
   speakers: Array<Object>;
+  private _jsonUrl: string = 'assets/json/speakers.json';
 
   public constructor(private http: HttpClient) {
     this.speakers = [];
   }
 
   getSpeakers(): Observable<Speaker[]> {
-    if (this.speakers.length === 0) {
-      console.log("No Speakers");
-      return this.http.get<Speaker[]>('/api/speakers')
-        .do(data => { 
-          this.speakers = data;
-        })
-    } else {
-      console.log("Got Speakers");
-      return Observable.of(this.speakers);
-    }
+    return this.http.get<Speaker[]>(this._jsonUrl); 
+    // if (this.speakers.length === 0) {
+    //   console.log("No Speakers");
+    //   return this.http.get<Speaker[]>('/api/speakers')
+    //     .do(data => { 
+    //       this.speakers = data;
+    //     })
+    // } else {
+    //   console.log("Got Speakers");
+    //   return Observable.of(this.speakers);
+    // }
   }
 
   countSpeakers(): Observable<number> {
