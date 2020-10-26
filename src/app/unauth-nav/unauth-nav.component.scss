@@ -1,9 +1,28 @@
+@use "../../boot" as *;
+
+#app-root.app-xs {
+  app-unauth-nav.header-links nav ul {
+    margin-left: -60px;
+  }  
+}
+
+#app-root.app-xs.app-lg {
+  
+  @include media-breakpoint-down(md) {
+    app-unauth-nav.header-links {
+      position: relative !important;
+      left: 0;
+    }  
+  }
+  app-unauth-nav.header-links {
+    position: absolute;
+    right: 0;
+  }
+}
+
 app-unauth-nav.header-links {
+  position: relative;
   nav {
-    float: right;
-    &:after {
-      clear: both;
-    }
     ul {
       margin: 0;
       li {
