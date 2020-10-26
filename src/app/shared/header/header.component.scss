@@ -1,16 +1,24 @@
 @use "../../../boot" as *;
+#app-root.app-xs {
+  header {
+    img {
+      width: 200px;
+    }
+  }
+}
 #app-root.app-xs.app-lg {
   header {
     width: 100%;
+    img {
+      width: 450px;
+    }
   }
 } 
-header {
-  display: block;
+#app-root header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 60px;
   position: relative;
   z-index: 4;
-  margin-bottom: 20px;
-  .conference-logo {
-    width: 450px;
-    height: auto;
-  }
 }
