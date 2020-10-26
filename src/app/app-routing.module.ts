@@ -12,6 +12,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { SpeakersComponent } from './speakers/speakers.component';
+import { SpeakerComponent } from './speaker/speaker.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -41,8 +42,8 @@ const routes: Routes = [
     }
   },
   { 
-    path: 'speakers/:link',
-    component: SpeakersComponent
+    path: 'speaker/:link',
+    component: SpeakerComponent
   },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },

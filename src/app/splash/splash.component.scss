@@ -1,34 +1,23 @@
-#app-root.app-xs {
-  display: block;
-}
+#app-root.app-xs.app-lg app-splash {
+  .intro {
+    font-size: 1.8em;
+    max-width: 700px;
+    margin-top: 25px;
+  }
+  .why-attend {
+    font-size: 20px;
+    max-width: 500px;
+  }
+  .conference-date {
+    font-size: 1.5rem;
 
-#app-root.app-xs.app-md {
-  display: block;
-}
-
-#app-root.app-xs.app-lg {
-  display: block;
-  #splash-wrapper {
-    .intro {
-      font-size: 1.8em;
-      max-width: 700px;
-      margin-top: 25px;
-    }
-    .why-attend {
-      font-size: 20px;
-      width: 500px;
-    }
-    .conference-date {
-      font-size: 1.5rem;
-
-      .cell {
-        padding: 10px 20px;
-      }
+    .cell {
+      padding: 10px 20px;
     }
   }
 }
 
-#splash-wrapper {
+app-splash {
   .intro {
     font-size: 1em;
     margin-top: 15px;
