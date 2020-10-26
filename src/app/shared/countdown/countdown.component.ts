@@ -72,7 +72,7 @@ export class CountDownComponent implements OnInit {
         $r.actual_size = $r.r_size + $r.r_thickness;
         $r.countdown_to_time = new Date($r.countdown_to).getTime();
         // $r.cvs.css({ width: $r.size.w+"px", height: $r.size.h+"px" });
-        $r.cvs.css({ width: "70%", height: "70%" });
+        $r.cvs.css({ width: "100%", height: "100%" });
         $r.go();
       },
       ctx: null,
