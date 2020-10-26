@@ -14,11 +14,9 @@
 }
 
 #app-root {
-  min-height: 100vh; /* will cover the 100% of viewport */
   overflow: hidden;
   display: block;
   position: relative;
-  margin-bottom: 20px;
 }
 
 :root {
@@ -36,33 +34,84 @@
   --bg-warning: #ffc107;
 }
 
+#app-root.app-xs {
+  
+  &.transparency-container {
+    padding: 10px;
+  }
+
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  h1.page-title {
+    font-size: 1.5em;
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+  }
+  
+  h3 {
+    font-size: 0.5rem;
+  }
+  
+  .container section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+
+#app-root.app-xs.app-lg {
+  
+  &.transparency-container {
+    padding: 20px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h1.page-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+  
+  #app-root {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    margin-bottom: 20px;
+  }
+
+  .container section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }  
+}
+
 h1, h2, h3 {
   color: var(--theme-primary-lightblue);
   -webkit-text-stroke: 1px #282828;
 	text-shadow: 0px 4px 4px #282828;
-
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-h1.page-title {
-  font-size: 2rem;
-  text-align: left;
-}
-
-h2 {
-  font-size: 1.25rem;
-}
-
-h3 {
-  font-size: 1rem;
-}
-
-.container section {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .top-container {
@@ -105,7 +154,6 @@ app-root a {
 
 .transparency-container {
   background-color: black;
-  padding: 20px;
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(0, 0, 0);
   /* RGBa with 0.6 opacity */
