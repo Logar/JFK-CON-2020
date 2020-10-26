@@ -1,22 +1,41 @@
 #app-root.app-xs {
   display: block;
 }
+
 #app-root.app-xs.app-md {
   display: block;
 }
+
 #app-root.app-xs.app-lg {
   display: block;
+  #splash-wrapper {
+    .intro {
+      font-size: 1.8em;
+      max-width: 700px;
+      margin-top: 25px;
+    }
+    .why-attend {
+      font-size: 20px;
+      width: 500px;
+    }
+    .conference-date {
+      font-size: 1.5rem;
+
+      .cell {
+        padding: 10px 20px;
+      }
+    }
+  }
 }
 
 #splash-wrapper {
   .intro {
-    font-size: 1.8em;
-    max-width: 700px;
-    margin-top: 25px;
+    font-size: 1em;
+    margin-top: 15px;
   }
   .conference-date {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1em;
     .date-range {
       font-weight: bold;
     }
@@ -28,7 +47,7 @@
     }
     .cell {
       text-align: center;
-      padding: 10px 20px;
+      padding: 5px 10px;
       border: 1px solid #fff;
       background: rgb(8, 8, 45);
       background: rgba(8, 8, 45, 0.6);
@@ -38,7 +57,6 @@
   }
   .why-attend {
     margin-top: 60px;
-    font-size: 20px;
-    width: 500px;
+    font-size: 16px;
   }
 }
