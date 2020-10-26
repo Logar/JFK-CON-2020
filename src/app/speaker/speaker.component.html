@@ -1,0 +1,10 @@
+<main *ngIf="speakerModel">
+  <article>
+    <img
+      src="{{ speakerModel.thumbnail }}"
+      alt="{{ speakerModel.name }}"
+      class="center">
+    <h1 class="page-title">{{ speakerModel.name }}</h1>
+    <div [innerHtml]="speakerModel.bio | safeHtml"></div>
+  </article>
+</main>

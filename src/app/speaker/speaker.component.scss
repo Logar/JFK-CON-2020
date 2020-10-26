@@ -1,0 +1,23 @@
+#app-root.app-xs app-speaker {
+  img {
+    width: 200px;
+  }
+}
+
+#app-root.app-xs.app-lg app-speaker {
+  img {
+    width: 300px;
+  }
+}
+
+app-speaker {
+  p {
+    text-indent: 2em;
+    font-size: 1.3em;
+  }
+  img {
+    display: block;
+    height: auto;
+    border: 2px solid var(--theme-primary-navyblue);
+  }
+}

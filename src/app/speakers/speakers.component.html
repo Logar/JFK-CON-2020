@@ -1,11 +1,11 @@
 <div id="conference-preview-bg"></div>
-<main *ngIf="primarySpeakers.length > 0">
+<main> 
   <h1 class="page-title">Speakers</h1>
-  <article class="speakers primary">
-    <div *ngFor="let speaker of primarySpeakers">
-      <div class="thumbnail primary">
+  <article class="primary">
+    <div *ngFor="let speaker of primarySpeakers" class="primary-container">
+      <div class="primary-thumbnail">
         <a
-          [routerLink]="['/speakers/' + speaker.link]"
+          [routerLink]="['/speaker/' + speaker.link]"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact:true}">
           <img src="{{ speaker.thumbnail }}" alt="{{ speaker.name }}">
@@ -14,12 +14,12 @@
       </div>
     </div>
   </article>
-  <article class="speakers secondary">
+  <article class="secondary">
     <div *ngFor="let speaker of secondarySpeakers">
-      <div class="thumbnail secondary">
+      <div class="secondary-thumbnail">
         <a
           *ngIf="speaker.bio"
-          [routerLink]="['/speakers/' + speaker.link]"
+          [routerLink]="['/speaker/' + speaker.link]"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact:true}">
           <img src="{{ speaker.thumbnail }}" alt="{{ speaker.name }}">
@@ -31,15 +31,5 @@
         </div>
       </div>
     </div>
-  </article>
-</main>
-<main *ngIf="primarySpeakers.length === 0" class="speaker">
-  <article>
-    <img
-      src="{{ speakerModel.thumbnail }}"
-      alt="{{ speakerModel.name }}"
-      class="center">
-    <h1 class="page-title">{{ speakerModel.name }}</h1>
-    <div [innerHtml]="speakerModel.bio | safeHtml"></div>
   </article>
 </main>
