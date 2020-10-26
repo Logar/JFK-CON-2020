@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'ticket-button',
+  selector: 'app-ticket-button',
   templateUrl: './ticket-button.component.html',
   styleUrls: ['./ticket-button.component.scss'],
   encapsulation: ViewEncapsulation.None
