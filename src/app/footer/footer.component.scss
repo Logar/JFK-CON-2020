@@ -3,6 +3,10 @@ app-footer {
   position: absolute;
   width: 100%;
 
+  input[type=checkbox] {
+    display: none;
+  }
+  
   #border-top {
     position: absolute;
     z-index: -1;
@@ -20,10 +24,6 @@ app-footer {
         );
     }    
   }
-
-  // @media (max-height:800px){
-  //   footer { position: static; }
-  // }
 
   .footer-distributed{
     width: 100%;
