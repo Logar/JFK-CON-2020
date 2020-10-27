@@ -1,4 +1,4 @@
-<main *ngIf="speakerModel">
+<div *ngIf="speakerModel">
   <article>
     <img
       src="{{ speakerModel.thumbnail }}"
@@ -7,4 +7,4 @@
     <h1 class="page-title">{{ speakerModel.name }}</h1>
     <div [innerHtml]="speakerModel.bio | safeHtml"></div>
   </article>
-</main>
+</div>

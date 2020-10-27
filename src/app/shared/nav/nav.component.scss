@@ -1,6 +1,6 @@
 @use "../../../boot" as *;
 
-#app-root.app-xs.app-lg nav {
+#app-root.app-lg nav {
   label {
     display: none;
   }
@@ -144,7 +144,7 @@ nav {
   }
 }
 
-#app-root.app-xs.app-lg app-nav {
+#app-root.app-lg app-nav {
   ul.menu {
     flex-direction: row;
     > li.nav-item {

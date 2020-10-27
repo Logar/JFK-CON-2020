@@ -1,12 +1,13 @@
 @use "../../../boot" as *;
-#app-root.app-xs {
-  header {
-    img {
-      width: 200px;
-    }
+#app-root.app-xs app-header {
+  position: fixed;
+  top: 0;
+  background: var(--black);
+  img {
+    width: 200px;
   }
 }
-#app-root.app-xs.app-lg {
+#app-root.app-lg {
   header {
     width: 100%;
     img {
@@ -14,11 +15,12 @@
     }
   }
 } 
-#app-root header {
+
+#app-root app-header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 60px;
-  position: relative;
-  z-index: 4;
+  z-index: 900;
+  width: 100%;
 }

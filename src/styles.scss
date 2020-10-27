@@ -36,6 +36,10 @@
 
 #app-root.app-xs {
   
+  main {
+    margin-top: 60px;
+  }
+
   &.transparency-container {
     padding: 10px;
   }
@@ -68,7 +72,7 @@
   }
 }
 
-#app-root.app-xs.app-lg {
+#app-root.app-lg {
 
   &.transparency-container {
     padding: 20px;

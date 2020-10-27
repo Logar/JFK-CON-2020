@@ -32,7 +32,7 @@ export class AppComponent implements AfterViewChecked, OnInit {
     let mobileDetect = new MobileDetect(window.navigator.userAgent);
     
     if (mobileDetect.phone()) {
-      this._renderer.addClass(this._el.nativeElement.firstChild, 'app-sm');
+      this._renderer.addClass(this._el.nativeElement.firstChild, 'app-xs');
     } else if (mobileDetect.tablet()) {
       this._renderer.addClass(this._el.nativeElement.firstChild, 'app-lg');
     } else {

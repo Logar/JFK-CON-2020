@@ -1,35 +1,33 @@
 <div id="conference-preview-bg"></div>
-<main> 
-  <h1 class="page-title">Speakers</h1>
-  <article class="primary">
-    <div *ngFor="let speaker of primarySpeakers" class="primary-container">
-      <div class="primary-thumbnail">
-        <a
-          [routerLink]="['/speaker/' + speaker.link]"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact:true}">
-          <img src="{{ speaker.thumbnail }}" alt="{{ speaker.name }}">
-          <h2>{{ speaker.name }}</h2>
-        </a>
+<h1 class="page-title">Speakers</h1>
+<article class="primary">
+  <div *ngFor="let speaker of primarySpeakers" class="primary-container">
+    <div class="primary-thumbnail">
+      <a
+        [routerLink]="['/speaker/' + speaker.link]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <img src="{{ speaker.thumbnail }}" alt="{{ speaker.name }}">
+        <h2>{{ speaker.name }}</h2>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="secondary">
+  <div *ngFor="let speaker of secondarySpeakers">
+    <div class="secondary-thumbnail">
+      <a
+        *ngIf="speaker.bio"
+        [routerLink]="['/speaker/' + speaker.link]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <img src="{{ speaker.thumbnail }}" alt="{{ speaker.name }}">
+        <h2>{{ speaker.name }}</h2>
+      </a>
+      <div *ngIf="!speaker.bio">
+        <i class="fas fa-user-tie"></i>
+        <h2>{{ speaker.name }}</h2>
       </div>
     </div>
-  </article>
-  <article class="secondary">
-    <div *ngFor="let speaker of secondarySpeakers">
-      <div class="secondary-thumbnail">
-        <a
-          *ngIf="speaker.bio"
-          [routerLink]="['/speaker/' + speaker.link]"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact:true}">
-          <img src="{{ speaker.thumbnail }}" alt="{{ speaker.name }}">
-          <h2>{{ speaker.name }}</h2>
-        </a>
-        <div *ngIf="!speaker.bio">
-          <i class="fas fa-user-tie"></i>
-          <h2>{{ speaker.name }}</h2>
-        </div>
-      </div>
-    </div>
-  </article>
-</main>
+  </div>
+</article>
