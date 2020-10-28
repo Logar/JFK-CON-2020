@@ -1,0 +1,37 @@
+#app-root app-login {
+  
+  .login-panel {
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  .form-control {
+    padding: 15px 20px;
+    font-size: 22px;
+  }
+  .btn.btn-lg {
+    padding: 10px 20px;
+    font-size: 22px;
+    background-color: var(--theme-primary-gold);
+    color: var(--theme-primary-navyblue);
+  }
+}
+
+#app-root.app-xs app-login {
+  .login-panel {
+    width: 100%;
+  }
+}
+
+#app-root.app-lg app-login {
+  .login-panel {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+    width: 75%;
+    border-radius: 5px;
+  }
+  .form-control {
+    padding: 15px 20px;
+  }
+}
