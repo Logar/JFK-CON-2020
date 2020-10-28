@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { JwtHelperService } from '@auth0/angular-jwt';
-
 import { UserService } from './user.service';
 import { User } from '../shared/models/user.model';
 
-@Injectable()
+import * as tickets from '../../assets/json/tickets.json';
+
+@Injectable({
+  'providedIn': 'root'
+})
 export class AuthService {
+  
   loggedIn = false;
   isAdmin = false;
 
   currentUser: User = new User();
 
   constructor(private userService: UserService,
-              private router: Router,
               private jwtHelper: JwtHelperService) {
     const token = localStorage.getItem('token');
     if (token) {
@@ -23,15 +25,19 @@ export class AuthService {
     }
   }
 
-  login(emailAndPassword) {
-    // return this.userService.login(emailAndPassword).map(
-    //   res => {
-    //     localStorage.setItem('token', res.token);
-    //     const decodedUser = this.decodeUserFromToken(res.token);
-    //     this.setCurrentUser(decodedUser);
-    //     return this.loggedIn;
-    //   }
-    // );
+  login(loginForm) {
+    let input = loginForm.ticket.trim();
+    let found = tickets['default'].filter(item => item.number === input);
+
+    if (found[0]) {     
+      let rawToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'; 
+      const decodedToken = this.jwtHelper.decodeToken(rawToken);
+      
+      localStorage.setItem('token', rawToken);
+      const decodedUser = this.decodeUserFromToken(rawToken);
+      this.setCurrentUser(decodedToken);
+    }
+    return this.loggedIn;
   }
 
   logout() {
@@ -39,19 +45,20 @@ export class AuthService {
     this.loggedIn = false;
     this.isAdmin = false;
     this.currentUser = new User();
-    this.router.navigate(['/']);
   }
-
+  
   decodeUserFromToken(token) {
-    return this.jwtHelper.decodeToken(token).user;
+    return this.jwtHelper.decodeToken(token);
   }
 
   setCurrentUser(decodedUser) {
+    // User is logged in
     this.loggedIn = true;
+
     this.currentUser._id = decodedUser._id;
     this.currentUser.username = decodedUser.username;
     this.currentUser.role = decodedUser.role;
-    decodedUser.role === 'admin' ? this.isAdmin = true : this.isAdmin = false;
+      decodedUser.role === 'admin' ? this.isAdmin = true : this.isAdmin = false;
     delete decodedUser.role;
   }
 
