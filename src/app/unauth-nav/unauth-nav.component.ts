@@ -1,8 +1,10 @@
 import {
   Component,
+  HostListener,
   OnInit,
   ViewEncapsulation
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AuthService } from '../services/auth.service';
 
@@ -15,11 +17,29 @@ import { AuthService } from '../services/auth.service';
 export class UnauthNavComponent implements OnInit {
 
   loggedIn: Boolean;
+  checked: Boolean;
 
-  constructor(private auth: AuthService) { }
+  constructor(
+    private auth: AuthService,
+    private router: Router) {
+    router.events.subscribe(() => this.checked = false);
+    this.checked = false;
+  }
 
   ngOnInit() {
     this.loggedIn = this.auth.loggedIn;
+  }
+
+  // for window scroll events
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+    this.checked = false;
+  }
+  
+  ngOnDestroy() { }
+
+  checkedOnChange() {
+    this.checked = (this.checked) ? false : true;
   }
 
 }
