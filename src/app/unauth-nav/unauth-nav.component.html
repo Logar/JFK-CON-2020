@@ -8,7 +8,7 @@
     <li class="nav-item">
       <a
         [routerLink]="['/']"
-        class="nav-link"
+        class="nav-link btn btn-lg"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">
           Home
@@ -17,7 +17,7 @@
     <li class="nav-item">
       <a
         [routerLink]="['/speakers']"
-        class="nav-link"
+        class="nav-link btn btn-lg"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">
           Speakers
@@ -26,10 +26,30 @@
     <li class="nav-item">
       <a
         [routerLink]="['/tickets']"
-        class="nav-link"
+        class="nav-link btn btn-lg"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">
           Tickets
+      </a>
+    </li>
+    <li *ngIf="!loggedIn" class="nav-item">
+      <a
+        [routerLink]="['/login']"
+        class="login-link nav-link btn btn-lg"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+          <i class="fas fa-lock"></i>  
+          Login          
+      </a>
+    </li>
+    <li *ngIf="loggedIn" class="nav-item">
+      <a
+        [routerLink]="['/logout']"
+        class="login-link nav-link btn btn-lg"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <i class="fas fa-unlock"></i>  
+          Logout
       </a>
     </li>
   </ul>
