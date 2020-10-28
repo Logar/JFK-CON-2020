@@ -1,4 +1,4 @@
-app-tickets {
+#app-root app-tickets {
   text-align: center;
   margin: 0 auto;
   .button-container {
@@ -13,7 +13,7 @@ app-tickets {
         filter: brightness(150%);
       }
       .fas {
-        font-size: 48px;
+        margin-right: 20px;
         vertical-align: sub;
       }
     }
@@ -26,5 +26,23 @@ app-tickets {
     .tier-3 {
       background-color: #310331;
     }
+  }
+}
+
+#app-root.app-xs app-tickets {
+  a {
+    font-size: 16px;
+  }
+  .fas {
+    font-size: 36px;
+  }
+}
+
+#app-root.app-lg app-tickets {
+  a {
+    font-size: 20px;
+  }
+  .fas {
+    font-size: 42px;
   }
 }

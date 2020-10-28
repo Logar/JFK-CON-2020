@@ -6,6 +6,7 @@ import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 // Components
 import { SplashComponent } from './splash/splash.component';
+import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -45,6 +46,7 @@ const routes: Routes = [
     path: 'speaker/:link',
     component: SpeakerComponent
   },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuardLogin] },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },

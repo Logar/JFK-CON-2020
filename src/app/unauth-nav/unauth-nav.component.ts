@@ -4,6 +4,8 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 
+import { AuthService } from '../services/auth.service';
+
 @Component({
   selector: 'app-unauth-nav',
   templateUrl: './unauth-nav.component.html',
@@ -12,9 +14,12 @@ import {
 })
 export class UnauthNavComponent implements OnInit {
 
-  constructor() { }
+  loggedIn: Boolean;
 
-  ngOnInit(): void {
+  constructor(private auth: AuthService) { }
+
+  ngOnInit() {
+    this.loggedIn = this.auth.loggedIn;
   }
 
 }

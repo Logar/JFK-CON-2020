@@ -74,6 +74,8 @@
 
 #app-root.app-lg {
 
+  min-width: 515px;
+
   &.transparency-container {
     padding: 20px;
   }
@@ -180,6 +182,7 @@ app-root a {
   border-color: #338800;
   background-color: #c7f7be;
   color: #000000;
+  margin-bottom: 10px;
 }
 
 .error-box {
@@ -189,6 +192,7 @@ app-root a {
   border-color: #FF2200;
   background-color: #FFDDBB;
   color: #000000;
+  margin-bottom: 10px;
 }
 
 .align-center {
