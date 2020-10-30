@@ -9,6 +9,8 @@ import {
 } from '@angular/core';
 
 import { AuthService } from './services/auth.service';
+import { Router, NavigationEnd } from '@angular/router';
+
 import MobileDetect from 'node_modules/mobile-detect/mobile-detect';
 
 @Component({
@@ -21,7 +23,8 @@ export class AppComponent implements AfterViewChecked, OnInit {
   constructor(public _auth: AuthService,
               private _changeDetector: ChangeDetectorRef,
               private _renderer: Renderer2,
-              private _el: ElementRef) { }
+              private _el: ElementRef,
+              private _router: Router) { }
 
   ngAfterViewChecked() {
     this._changeDetector.detectChanges();
@@ -38,5 +41,12 @@ export class AppComponent implements AfterViewChecked, OnInit {
     } else {
       this._renderer.addClass(this._el.nativeElement.firstChild, 'app-lg');
     }
+
+    this._router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0)
+    });
   }
 }
