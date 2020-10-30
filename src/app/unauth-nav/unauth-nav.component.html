@@ -1,5 +1,8 @@
 <nav>
-  <input type="checkbox">
+  <input
+    type="checkbox"
+    [checked]="checked"
+    (change)="checkedOnChange()">
    <!-- Some spans mimicking a McDonald's hamburger -->
   <span class="hamburger"></span>
   <span class="hamburger"></span>

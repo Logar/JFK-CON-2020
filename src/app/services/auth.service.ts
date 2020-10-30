@@ -29,7 +29,7 @@ export class AuthService {
     let input = loginForm.ticket.trim();
     let found = tickets['default'].filter(item => item.number === input);
 
-    if (found[0]) {     
+    if (found[0]) {
       let rawToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'; 
       const decodedToken = this.jwtHelper.decodeToken(rawToken);
       
