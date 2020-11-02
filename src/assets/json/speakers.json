@@ -25,7 +25,7 @@
       "link":"brent-holland",
       "primary":false,
       "thumbnail":"/assets/images/speakers/secondary/brent-holland.jpg",
-	  "bio":""
+	  "bio":"<p>Brent Holland is the radio host of two syndicated shows through the NCRA broadcast system. The Brent Holland Show (interviews with Prime Ministers, Heads of State, Nobel Peace Laureates, Pulitzer, Icons and Night Fright (paranormal / conspiracy number one Canadian based show of its genre). Guests have included: Shirin Ebadi (Nobel Peace Prize), Jody Williams (Nobel Peace Prize), Mairead Maguire (Nobel Peace Prize), Dr. Douglas Osheroff (Nobel Prize for Physics), Ted Sorensen (closest aid to JFK & RFK), Canadian Prime Minister Paul Martin, His Excellency Governor General David Johnson, Lt. General Roméo Dallaire (Peacekeeping hero), Khaled Hosseini (The Kite Runner), Erin Brockovich (international environmental advocate), Joseph Sebarenzi (Speaker of the Rwanda Parliament, genocide survivor), Minni Jean Brown (civil rights legend; Little Rock Nine), David Finkel (Pulitzer Prize winner / embedded in Iraq), Alan Thicke (star of #1 ABC TV series \"Growing Pains\"; spokesperson for Diabetes Care) in addition, many other guests who have been on Larry King, Charlie Rose, Letterman, Discovery, etc.</p><p>Brent Holland is a music composer for feature films and television having composed for NASA, ABC, CBS, NBC, FOX, PBS, CBC, SRC, CTV, TVA, TQS, Global, etc. and also in Vietnam, France, Turkey, Great Britain and Europe. He is currently scoring a Hollywood feature film starring Martin Sheen, Ed Asner, Sam Waterston, Joe Don Baker and Martin Landeau. Mr. Holland has BFA in Music and BFA in Theatre Design (lighting) having worked extensively in this area with Bon Jovi, Michael Jackson, Rod Stewart, Yes, etc. Night Fright is now syndicated through the 80 station NCRA broadcast network and has achieved number one Canadian based show of its genre.</p><p>The Brent Holland Show was started October 2009 and was started purely to inspire university and college age students, who listen weekly from coast to coast to coast, into service in the global village.</p>"
    },
    {
       "name":"Carmie Savastano",
@@ -129,8 +129,8 @@
       "name":"David Boylan",
       "link":"david-boylan",
       "primary":false,
-      "thumbnail":"",
-	  "bio":""
+      "thumbnail":"/assets/images/speakers/secondary/david-boylan.jpg",
+	  "bio":"<p>Boylan is the author of A League of Their Own: Inside the Christian Defense League and Co-author with Larry Hancock of The Wheaton Lead - An Exploration.</p>"
    },
    {
       "name":"Pamela Brown",
@@ -151,6 +151,76 @@
       "link":"dr-larry-haapanen",
       "primary":false,
       "thumbnail":"",
-	  "bio":""
+	   "bio":""
+   },
+   {
+      "name":"Rex Bradford",
+      "link":"rex-bradford",
+      "primary":false,
+      "thumbnail":"/assets/images/speakers/secondary/rex-bradford.jpg",
+	   "bio":"<p>Rex Bradford is a computer game developer who has become an electronic archivist of the assassination of John F. Kennedy. He began scanning documents and making them available online and on CDs in 1999. He is the president and analyst/archivist for the Mary Ferrell Foundation, Vice-President of the Assassination Archives and Research Center, and founded History Matters. He has written several essays and given talks on the \"Oswald Mexico City trip\" and the medical evidence at the JFK Lancer November in Dallas Conference in the past.</p>"
+   },
+   {
+      "name":"Alan Dale",
+      "link":"alan-dale",
+      "primary":false,
+      "thumbnail":"/assets/images/speakers/secondary/alan-dale.jpg",
+	   "bio":"<p>Alan Dale is a host of JFK Lancer: Conversations, an online interview program featuring in-depth discussions with prominent authors, historical researchers, and notable personalities associated with the study of President Kennedy’s assassination. He is a full-time professional jazz musician and band leader, a lifetime student of American history whose parents were active as supporters and volunteers in the political campaigns of John and Robert Kennedy. He is the administrator of <a href=\"jfkessentials.com\">jfkesssentials.com</a>.</p>"
+   },
+   {
+      "name":"Brian Edwards",
+      "link":"brian-edwards",
+      "primary":false,
+      "thumbnail":"",
+	   "bio":""
+   },
+   {
+      "name":"Steve Griggs",
+      "link":"steve-griggs",
+      "primary":false,
+      "thumbnail":"",
+	   "bio":""
+   },
+   {
+      "name":"David Knight",
+      "link":"david-knight",
+      "primary":false,
+      "thumbnail":"",
+	   "bio":""
+   },
+   {
+      "name":"William Law",
+      "link":"William-law",
+      "primary":false,
+      "thumbnail":"/assets/images/speakers/secondary/william-law.jpg",
+      "bio":"<p>William Law, a frequent contributor to JFK Lancer, is the author of the book, \"In the Eye of History,\"  and co-authored \"Betrayal: A JFK Honor Guard Speaks\" and \"On the Cold Shoulder of History\". Law's interest in the Kennedy assassination began in 1975 with the showing of Abraham Zapruder's 26-second home movie of the event on Geraldo Rivera's \"Goodnight America\" program. Later, after reading David Lifton's book \"Best Evidence\", Law began researching Kennedy's murder. Law has written for the research periodicals the \"Kennedy Assassination Chronicles\" and the \"Dealey Plaza Echo\", is producer of the DVD \"The Gathering\", and served as a consultant to film director Brian McKenna for his documentary \"Killing Kennedy\" and one with Mark Sobel to co-produce a documentary on the assassination of Robert Kennedy.</p>"
+   },
+   {
+      "name":"Jefferson Morley",
+      "link":"jefferson-morley",
+      "primary":false,
+      "thumbnail":"/assets/images/speakers/secondary/jefferson-morley.jpg",
+      "bio":"<p>Jefferson Morley is a journalist and editor who has worked in Washington journalism for over thirty years, fifteen of which were spent as an editor and reporter at The Washington Post. The author of The Ghost, a biography of CIA spymaster James Jesus Angleton, and Our Man in Mexico, a biography of the CIA’s Mexico City station chief Winston Scott, Morley has written about intelligence, military, and political subjects for Salon, The Atlantic, and The Intercept, among others. He is the editor of JFK Facts, a blog.</p>"
+   },
+   {
+      "name":"Casey Quinlan",
+      "link":"casey-quinlan",
+      "primary":false,
+      "thumbnail":"",
+      "bio":""
+   },
+   {
+      "name":"Steve Roe",
+      "link":"steve-roe",
+      "primary":false,
+      "thumbnail":"/assets/images/speakers/secondary/steve-roe.jpg",
+      "bio":"<p>Roe is recently retired living in the Texas Hill Country area near San Antonio. His work experience includes 36 years in the Oil/Gas Exploration industry and 4 years in the Medical Biotech field. Roe has a Bachelor of Science degree in Geology from Stephen F. Austin University, Nacogdoches, Texas. He was born in Detroit, Michigan 1955, lived in Dallas, Texas from 1956 to 1975. Roe resided in Texas from 1956 to 1983, and in Southern California from 1983 to 2019. He has worked in numerous places including Venezuela, Colombia, Ecuador, Mexico, Belize, Papua New Guinea and domestic in Texas, California, Oregon, Nevada, New Mexico, Louisiana and Hawaii.</p><p>His hobbies include Golf, Hunting, Fishing, Texas history, Dallas history, 1960's Vintage Rock Posters and the JFK Assassination. Roe was a contributing author for Gayle Nix Jackson's 2017 book \"Pieces of the Puzzle\" (Welcome Mr. Kennedy to Dallas chapter) and authored \"Earle Cabell – Bombshell or Dud?\" 2018 article for \"Washington Decoded\" (Max Holland). Roe has an oral history at the Sixth Floor Museum with Stephen Fagin. He is an Independent researcher interested in trying to find answers to various questions, people, and events associated with the JFK assassination, primarily topics surrounding General Walker, Oswald and Dallas.</p>"
+   },
+   {
+      "name":"Mike Swanson",
+      "link":"mike-swanson",
+      "primary":false,
+      "thumbnail":"/assets/images/speakers/secondary/mike-swanson.jpg",
+      "bio":"<p>Michael Swanson is the founder and head editor of <a href=\"WallStreetWindow.com\">WallStreetWindow.com</a>. He ran a hedge fund from 2003 to 2006 that generated a return of over 78% for its investors during that time frame and in one year was ranked in the top thirty-five hedge funds among several thousand tracked by hedgefund.net. He received a Masters Degree in history from the University of Virginia in 1998 and since retiring from the hedge fund world writes about global investment trends, the financial markets, and American history.</p><p>Swanson has also authored \"The War State: The Cold War Origins Of The Military-Industrial Complex And The Power Elite, 1945-1963\" and is a frequent guest on The Ochelli Effect (<a href=\"ochelli.com\")>ochelli.com</a>).</p>"
    }
 ]
