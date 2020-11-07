@@ -1,4 +1,7 @@
 #app-root app-home {
+  display: block;
+  background: var(--black);
+
   .page-title {
     text-align: center !important;
   }
