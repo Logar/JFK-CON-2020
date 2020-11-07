@@ -4,7 +4,6 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { FormsModule } from '@angular/forms';
 // Modules
 import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
 // Services
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
