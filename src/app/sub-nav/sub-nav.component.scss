@@ -1,0 +1,17 @@
+app-sub-nav {
+  nav {
+    ul {
+      display: flex;
+      margin: 0;
+      column-gap: 20px;
+    }
+    li {
+      list-style: none;
+      padding: 20px;
+      font-size: 1.1em;
+      text-align: center;
+      border: 1px solid gray;
+      display: inline-flex;
+    }
+  }
+}
