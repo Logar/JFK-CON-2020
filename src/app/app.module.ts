@@ -1,9 +1,14 @@
 // Angular
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { JwtModule } from '@auth0/angular-jwt';
-import { FormsModule } from '@angular/forms';
+
 // Modules
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home/home.module';
+
 // Services
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
@@ -33,6 +38,8 @@ import { UnauthNavComponent } from './unauth-nav/unauth-nav.component';
 // Pipes
 import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
 import { SpeakerComponent } from './speaker/speaker.component';
+import { ToastComponent } from './shared/toast/toast.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -56,18 +63,29 @@ export function tokenGetter() {
     SpeakersComponent,
     UnauthNavComponent,
     SafeHtmlPipe,
-    SpeakerComponent
+    SpeakerComponent,
+    ToastComponent,
+    LoadingComponent
   ],
   imports: [
-    AppRoutingModule,
-    SharedModule,
+    BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
     JwtModule.forRoot({
       config: {
         tokenGetter,
         // whitelistedDomains: ['localhost:3000', 'localhost:4200']
       }
-    })
+    }),
+    HomeModule.forRoot()
+  ],
+  exports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     AppState,
@@ -76,7 +94,8 @@ export function tokenGetter() {
     AuthGuardAdmin,
     UserService,
     SEOService,
-    SpeakerService
+    SpeakerService,
+    ToastComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
