@@ -23,7 +23,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NavComponent } from './shared/nav/nav.component';
 import { CountDownComponent } from './shared/countdown/countdown.component';
 import { TicketButtonComponent } from './ticket-button/ticket-button.component';
 import { FooterComponent } from './footer/footer.component';
@@ -43,7 +42,6 @@ export function tokenGetter() {
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent,
     SplashComponent,
     RegisterComponent,
     LoginComponent,
