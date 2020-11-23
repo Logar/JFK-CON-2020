@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { AuthService } from '../services/auth.service';
+
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,11 +12,22 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    protected _router: Router,
+    private _auth: AuthService) { }
 
-  ngOnInit() { 
+  ngOnInit() {
+    if (!this._auth.loggedIn) {
+      this._router.navigate(['/']);
+    }
+    // this.buildTimer();
+  }
+
+  buildTimer() {
     // Set the date we're counting down to
-    var countDownDate = new Date('November 20, 2020').getTime();
+    var countDownDate: any =  new Date(1605888000000);
+    countDownDate.toLocaleString('en-US', { timeZone: 'America/Chicago' });
+    countDownDate.getTime();
     var elem = document.getElementById('demo');
 
     if (!elem)
