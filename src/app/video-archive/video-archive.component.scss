@@ -1,0 +1,33 @@
+#app-root.app-lg app-video-archive,
+#app-root.app-xs app-video-archive {
+  .page-title { 
+    color: var(--white);
+  }
+  article {
+    max-width: 600px;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+  }
+  .btn.btn-secondary {
+    background: black;
+    margin-right: 20px;
+    &.active {
+      background: #a07e1b;
+      color: black;
+      font-weight: bold;
+    }
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  .border-bottom {
+    position: absolute;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted white;
+  }
+}

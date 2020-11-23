@@ -1,1 +1,65 @@
-<p>video-archive works!</p>
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label
+    class="btn btn-secondary"
+    [class.active]="selectedDay === 'Friday'">
+    <input
+      type="radio"
+      name="days"
+      id="day1"
+      autocomplete="off"
+      (change)="onDayChanged('Friday')"
+      checked>
+    Day 1
+  </label>
+  <label 
+    class="btn btn-secondary"
+    [class.active]="selectedDay === 'Saturday'">
+    <input
+      type="radio"
+      name="days"
+      id="day2"
+      autocomplete="off"
+      (change)="onDayChanged('Saturday')">
+    Day 2
+  </label>
+  <label
+    class="btn btn-secondary"
+    [class.active]="selectedDay === 'Sunday'">
+    <input
+      type="radio"
+      name="days"
+      id="day3"
+      autocomplete="off"
+      (change)="onDayChanged('Sunday')">
+    Day 3
+  </label>
+</div>
+
+<div *ngIf="selectedDay === 'Friday'">
+  <h1 class="page-title">Day 1 - Friday - 11/20</h1>
+</div>
+<div *ngIf="selectedDay === 'Saturday'">
+  <h1 class="page-title">Day 2 - Saturday - 11/21</h1>
+</div>
+<div *ngIf="selectedDay === 'Sunday'">
+  <h1 class="page-title">Day 3 - Sunday - 11/22</h1>
+</div>
+
+<article *ngFor="let video of videos; let last = last">
+  <h2>{{ video.title }}</h2>
+  <h3>{{ video.author }}</h3>
+
+  <div class="video-container">
+    <video *ngIf="currentUser.role === 'all-access'" controls>
+      <source src="{{ video.source }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video *ngIf="currentUser.role === 'limited-access'" controls controlsList="nodownload">
+      <source src="{{ video.source }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div *ngIf="!last" class="border-bottom"></div>
+</article>
+
+<h2 *ngIf="selectedDay === 'Sunday'">The rest of Sunday's videos will be added on 11/23</h2>
