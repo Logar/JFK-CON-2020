@@ -151,6 +151,37 @@ app-root a {
   }
 }
 
+.max-width {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.video-container,
+.iframe-container {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.video-container video,
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .transparency-container {
   background-color: black;
   /* Fallback for web browsers that doesn't support RGBa */
