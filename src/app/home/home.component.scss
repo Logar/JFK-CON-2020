@@ -2,6 +2,11 @@
   display: block;
   background: var(--black);
 
+  .livestream {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
   .page-title {
     text-align: center !important;
   }
@@ -18,7 +23,6 @@
   }
   #demo {
     position: relative;
-    top: 100px;
     font-size: 32px;
   }
 }
