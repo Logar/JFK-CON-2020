@@ -24,7 +24,7 @@ export class CountDownComponent implements OnInit {
     $r.cvs = null;
 
     var ringer = {
-      countdown_to: "11/20/2020",
+      countdown_to: 1605888000000,
       rings: {
         'DAYS': { 
           s: 86400000, // mseconds in a day,
@@ -134,6 +134,6 @@ export class CountDownComponent implements OnInit {
         $r.ctx.restore();
       }
     }
-    ringer.init();
+    // ringer.init();
   }
 }
