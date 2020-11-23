@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 // Components
+import { AdminComponent } from './admin/admin.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { SplashComponent } from './splash/splash.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -14,8 +16,7 @@ import { AccountComponent } from './account/account.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { SpeakersComponent } from './speakers/speakers.component';
 import { SpeakerComponent } from './speaker/speaker.component';
-import { AdminComponent } from './admin/admin.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { VideoArchiveComponent } from './video-archive/video-archive.component';
 
 const routes: Routes = [
   { 
@@ -45,6 +46,15 @@ const routes: Routes = [
   { 
     path: 'speaker/:link',
     component: SpeakerComponent
+  },
+  { 
+    path: 'video-archive',
+    component: VideoArchiveComponent,
+    canActivate: [AuthGuardLogin],
+    data: {
+      title: '24th JFK Assassination Conference &raquo; Video Archive',
+      description: 'Listen to expert speakers from all over the world at JFK Lancer\'s 24th annual JFK assassination conference. Our primary speakers are for 2020 are Jim DiEugenio, Bill Simpich, Robert Groden.'
+    }
   },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardLogin] },
   { path: 'register', component: RegisterComponent },
