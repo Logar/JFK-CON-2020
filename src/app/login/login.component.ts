@@ -4,7 +4,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 
 import { AuthService } from '../services/auth.service';
 import { ToastComponent } from '../shared/toast/toast.component';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
