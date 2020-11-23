@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeModule } from './home/home.module';
 
 // Services
 import { AuthGuardLogin } from './services/auth-guard-login.service';
@@ -34,12 +33,15 @@ import { FooterComponent } from './footer/footer.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { SpeakersComponent } from './speakers/speakers.component';
 import { UnauthNavComponent } from './unauth-nav/unauth-nav.component';
-
-// Pipes
-import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
 import { SpeakerComponent } from './speaker/speaker.component';
 import { ToastComponent } from './shared/toast/toast.component';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { VideoArchiveComponent } from './video-archive/video-archive.component';
+import { HomeComponent } from './home/home.component';
+import { SubNavComponent } from './sub-nav/sub-nav.component';
+
+// Pipes
+import { SafeHtmlPipe } from './shared/pipes/safe-html.pipe';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -65,7 +67,10 @@ export function tokenGetter() {
     SafeHtmlPipe,
     SpeakerComponent,
     ToastComponent,
-    LoadingComponent
+    LoadingComponent,
+    HomeComponent,
+    VideoArchiveComponent,
+    SubNavComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +84,6 @@ export function tokenGetter() {
         // whitelistedDomains: ['localhost:3000', 'localhost:4200']
       }
     }),
-    HomeModule.forRoot()
   ],
   exports: [
     BrowserModule,
